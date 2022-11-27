@@ -150,7 +150,7 @@ label {
 #addresses:checked~.aside__main-nav--list li label[for=addresses]::before, 
 #special:checked~.aside__main-nav--list li label[for=special]::before, 
 #feedback:checked~.aside__main-nav--list li label[for=feedback]::before,
-#hz:checked~.aside__main-nav--list li label[for=hz]::before, 
+#servisecenter:checked~.aside__main-nav--list li label[for=hz]::before, 
 #contact:checked~.aside__main-nav--list li label[for=contact]::before {
   content: "";
   position: absolute;
@@ -169,7 +169,7 @@ label {
 #addresses:checked~.aside__main-nav--list li label[for=addresses], 
 #special:checked~.aside__main-nav--list li label[for=special], 
 #feedback:checked~.aside__main-nav--list li label[for=feedback],
-#hz:checked~.aside__main-nav--list li label[for=hz], 
+#servisecenter:checked~.aside__main-nav--list li label[for=hz], 
 #contact:checked~.aside__main-nav--list li label[for=contact] {
   color: #7E7E82;
 }
