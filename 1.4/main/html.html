@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Подключаем файл со стилями -->
+    <link rel="stylesheet" href="style.css"/>
+    <title>Макет 1.4</title>
+</head>
+<body>
+    <aside class="aside">
+        <div class="aside__header">
+            <div class="aside__header-left">
+                <button class="button exit-button"></button>
+                <img src="../img/logo.svg" class="logo" alt="Логотип" />
+            </div>
+            <div class="aside__header-right">
+                <button class="button search-button"></button>
+            </div>
+        </div>
+        <div class="aside__main">
+            <nav class="aside__main-nav">
+                <input class="radio" type="radio" name="button" id="devices" checked />
+                <input class="radio" type="radio" name="button" id="brands" />
+                <input class="radio" type="radio" name="button" id="prices" />
+                <input class="radio" type="radio" name="button" id="addresses" />
+                <input class="radio" type="radio" name="button" id="special" />
+                <input class="radio" type="radio" name="button" id="feedback" />
+                <input class="radio" type="radio" name="button" id="centers" />
+                <input class="radio" type="radio" name="button" id="contact" />
+                <ul class="aside__main-nav--list">
+                  <li>
+                    <label
+                      for="devices"
+                      class="nav__button"
+                      aria-label="Ремонтируемые устройства">
+                      Ремонт техники
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for="brands"
+                      class="nav__button"
+                      aria-label="Ремонтируемые бренды">
+                      Услуги и сервисы
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for="prices"
+                      class="nav__button"
+                      aria-label="Корпоративным клиентам">
+                      Корпоративным клиентам
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for="addresses"
+                      class="nav__button"
+                      aria-label="Адреса сервисных центров">
+                      Продавцам техники
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for="special"
+                      class="nav__button"
+                      aria-label="Специальные цены">
+                      Партнерам
+                    </label>
+                  </li>
+                  <li>
+                    <label 
+                      for="feedback" 
+                      class="nav__button" 
+                      aria-label="Отзывы">
+                      Производителям
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for="centers"
+                      class="nav__button"
+                      aria-label="Ремонтируемые устройства">
+                      Наши сервисные центры
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for="contact"
+                      class="nav__button"
+                      aria-label="Ремонтируемые устройства">
+                      Контакты
+                    </label>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        <div class="aside__footer">
+            <div class="aside__footer-buttons">
+                <button class="button call-button"></button>
+                <button class="button message-button"></button>
+                <button class="button profile-button"></button>
+            </div>
+            <div class="aside__footer-personal">
+                <a href="mailto:mail@cps.com" class="personal-mail">mail@cps.com</a>
+            </div>
+            <div class="aside__footer-personal">
+                <a href="tel:+78008908900" class="personal-tell">8 800 890 8900</a>
+            </div>
+            <div class="aside__footer-lang">
+                <input class="radio-lang" type="radio" name="button-lang" id="ru" checked />
+                <input class="radio-lang" type="radio" name="button-lang" id="en" />
+                <input class="radio-lang" type="radio" name="button-lang" id="ch" />
+                <ul class="aside__footer-lang-list">
+                    <li>
+                      <label
+                        for="ru"
+                        class="button-lang"
+                        aria-label="RU">
+                        RU
+                      </label>
+                    </li>
+                    <li>
+                      <label
+                        for="en"
+                        class="button-lang"
+                        aria-label="EN">
+                        EN
+                      </label>
+                    </li>
+                    <li>
+                      <label 
+                        for="ch" 
+                        class="button-lang" 
+                        aria-label="CH">
+                        CH
+                      </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>
