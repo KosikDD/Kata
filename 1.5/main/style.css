@@ -1,0 +1,267 @@
+/* Подключение шрифтов из папки fonts*/
+@font-face {
+  font-family: TTLakes-Medium;
+  src: url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: TTLakes-Bold;
+  src: url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: TTLakes-Regular;
+  src: url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-display: block;
+}
+
+*, *::after, *::before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "TTLakes-Medium";
+  font-weight: 500;
+  background-color: #F2F2F2;
+}
+
+.block__header {
+  background-image: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 100%);
+  margin-bottom: 16px;
+}
+
+.block__header--title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  padding: 16px;
+}
+
+.swiper{
+  min-width: 0;
+  padding-right: 32px;
+  height: 120px;
+  display: flex;
+  min-width: 0;
+  justify-content: flex-start;
+}
+
+.swiper::after {
+  content: "";
+  position: absolute;
+
+  width: 2em;
+  height: 72px;
+  background-image: linear-gradient(to right, transparent, #f8f8f8);
+
+  right: 0;
+  z-index: 1;
+}
+
+.block__main-swaper-wrapper {
+  min-width: 0;
+  padding-left: 16px;
+}
+
+.brand {
+  display: flex;
+  flex-shrink: 0;
+  width: 240px;
+  height: 72px;
+  background-color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+
+  justify-content: space-between;
+
+  padding: 16px;
+
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+
+  animation-name: slidedown ;
+}
+
+.brand--button{
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+
+  cursor: pointer;
+}
+
+.brand--button:hover {
+  transform: scale(1.2);
+}
+
+.brand--button::before{
+  content: url("../img/dropdown.svg");
+  padding-left: 1px;
+}
+
+.swiper-pagination-bullet {
+  margin-right: 6px !important;
+  margin-left: 6px !important;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC;
+  opacity: 1;
+}
+
+.block__main-more {
+  display: none;
+  margin-top: 24px;
+  margin-left: 32px;
+}
+
+.read-more {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+  transition: transform 0.2s;
+}
+
+.read-more:hover {
+  transform: scale(1.1);
+}
+
+.read-more::before {
+  content: url("../img/icon-readmore.svg");
+  position: absolute;
+  text-align: center;
+  width: 7.41px;
+  height: 10.29px;
+  left: -25px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  .hidden{
+    display: flex !important;
+  }
+
+  .hide-on-320 {
+    display: none !important;
+  }
+  
+  .hide-on-768 {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .block__main-more{
+    display: flex;
+  }
+
+  .block__main-swaper-wrapper {
+    padding-left: 0;
+    margin-right: 0;
+  }
+
+  .swiper{
+    padding-right: 0;
+  }
+
+  .swiper::after {
+    display: none;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+  .block__main-container{
+    margin-top: 24px;
+    padding-left: 24px;
+  }
+
+  .block__main-swaper{
+    display: block;
+    height: auto;
+  }
+
+  .block__main-swaper-wrapper {
+    width: 768px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+  
+  .brand {
+    width: 224px;
+  }
+
+  .hide-on-768 {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .block__main-swaper{
+    display: block;
+    height: auto;
+  }
+
+  .block__main-container{
+    padding-left: 32px;
+  }
+
+  .block__main-swaper-wrapper {
+    width: 1120px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    box-sizing: border-box;
+  }
+  
+  .brand {
+    width: 240px;
+  }
+
+  .brand--viewsonic {
+    display: flex !important;
+  }
+
+  .brand--sony {
+    display: flex !important;
+  }
+
+  .hide-on-768 {
+    display: flex ;
+  }
+
+  .hide-on-1120 {
+    display: none ;
+  }
+}
+
+@keyframes clip {
+  from { clip: rect(0, 0, 0, 0); }   
+  to { clip: rect(auto, auto, auto, auto); }  
+ }
