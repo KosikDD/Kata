@@ -86,8 +86,6 @@ body {
 
   border: 1px solid #EAEAEA;
   border-radius: 6px;
-
-  animation-name: slidedown ;
 }
 
 .brand--button{
@@ -133,6 +131,8 @@ body {
 }
 
 .read-more {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   position: relative;
   font-size: 16px;
@@ -141,11 +141,18 @@ body {
   transition: transform 0.2s;
 }
 
+.read-more-text {
+  font-family: "TTLakes-Medium";
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+}
+
 .read-more:hover {
   transform: scale(1.1);
 }
 
-.read-more::before {
+.arrow::before {
   content: url("../img/icon-readmore.svg");
   position: absolute;
   text-align: center;
@@ -154,23 +161,19 @@ body {
   left: -25px;
 }
 
-.hidden {
-  display: none;
+.arrow-reversed::before {
+  content: url("../img/icon-readmore.svg");
+  position: absolute;
+  text-align: center;
+  width: 7.41px;
+  height: 10.29px;
+  left: -24px;
+  top: 12px;
+  transform: rotate(180deg);
 }
 
-
-@media (max-width: 767px) {
-  .hidden{
-    display: flex !important;
-  }
-
-  .hide-on-320 {
-    display: none !important;
-  }
-  
-  .hide-on-768 {
-    display: flex;
-  }
+.hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -206,19 +209,19 @@ body {
   }
 
   .block__main-swaper-wrapper {
-    width: 768px;
+    width: fit-content;
+    box-sizing: border-box;
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
-    box-sizing: border-box;
+    margin-right: 24px;
+    justify-content: space-around;
   }
   
   .brand {
     width: 224px;
-  }
-
-  .hide-on-768 {
-    display: none;
+    flex-grow: 1;
+    max-width: 240px;
   }
 }
 
@@ -233,35 +236,16 @@ body {
   }
 
   .block__main-swaper-wrapper {
-    width: 1120px;
+    width: fit-content;
     align-items: center;
     flex-wrap: wrap;
     gap: 32px;
+    margin-right: 32px;
     box-sizing: border-box;
+    justify-content: start;
   }
   
   .brand {
     width: 240px;
   }
-
-  .brand--viewsonic {
-    display: flex !important;
-  }
-
-  .brand--sony {
-    display: flex !important;
-  }
-
-  .hide-on-768 {
-    display: flex ;
-  }
-
-  .hide-on-1120 {
-    display: none ;
-  }
 }
-
-@keyframes clip {
-  from { clip: rect(0, 0, 0, 0); }   
-  to { clip: rect(auto, auto, auto, auto); }  
- }
