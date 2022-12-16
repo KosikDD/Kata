@@ -3,7 +3,8 @@ let readmoreText = document.querySelector('.read-more-text');
 let arrow = document.querySelector('.arrow');
 let brand_elements = document.querySelectorAll('.brand');
 
-function hide(elements) {
+
+function hide(elements, event) {
   for (element of elements){ 
 
     if(!element.classList.contains('hidden')) {
@@ -20,14 +21,14 @@ function hide(elements) {
   }
 }
 
-readmore.addEventListener('click', function() {
+readmore.addEventListener('click', function(event) {
   if (window.innerWidth >= 768 && window.innerWidth < 1120){
-    hide(brand_elements);
+    hide(brand_elements, event);
     for (let i = 0; i <= 5; i++){
       brand_elements[i].classList.remove('hidden');
     } 
   } else {
-    hide(brand_elements);
+    hide(brand_elements, event);
     for (let i = 0; i <= 7; i++){
       brand_elements[i].classList.remove('hidden');
     }

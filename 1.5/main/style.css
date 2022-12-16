@@ -201,6 +201,7 @@ body {
   .block__main-container{
     margin-top: 24px;
     padding-left: 24px;
+    padding-right: 24px;
   }
 
   .block__main-swaper{
@@ -209,19 +210,15 @@ body {
   }
 
   .block__main-swaper-wrapper {
-    width: fit-content;
-    box-sizing: border-box;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    width: auto;
     gap: 24px;
-    margin-right: 24px;
-    justify-content: space-around;
   }
   
   .brand {
     width: 224px;
-    flex-grow: 1;
-    max-width: 240px;
   }
 }
 
@@ -233,14 +230,15 @@ body {
 
   .block__main-container{
     padding-left: 32px;
+    padding-right: 32px;
   }
 
   .block__main-swaper-wrapper {
+    display: flex;
     width: fit-content;
     align-items: center;
     flex-wrap: wrap;
     gap: 32px;
-    margin-right: 32px;
     box-sizing: border-box;
     justify-content: start;
   }
